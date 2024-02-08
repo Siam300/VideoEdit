@@ -34,6 +34,9 @@
     [self.view.layer addSublayer:self.playerLayer];
 }
 
+- (IBAction)textField:(id)sender {
+}
+
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -55,7 +58,34 @@
 }
 
 - (IBAction)saveAndExportVideo:(id)sender {
-    NSLog(@"Save button tapped!");
+    if (self.selectedVideoURL) {
+        NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+
+        // Set a custom filename for the exported video
+        NSString *exportedFilename = [NSString stringWithFormat:@"exported_%ld.mov", (long)[[NSDate date] timeIntervalSince1970]];
+        NSString *exportedPath = [documentsDirectory stringByAppendingPathComponent:exportedFilename];
+
+        // Export the original video to the user's directory
+        [self exportVideoAtPath:self.selectedVideoURL toPath:exportedPath];
+    }
+}
+
+- (void)exportVideoAtPath:(NSURL *)videoURL toPath:(NSString *)exportedPath {
+    AVURLAsset *videoAsset = [AVURLAsset assetWithURL:videoURL];
+
+    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset:videoAsset presetName:AVAssetExportPresetHighestQuality];
+    exportSession.outputFileType = AVFileTypeQuickTimeMovie;
+    exportSession.outputURL = [NSURL fileURLWithPath:exportedPath];
+
+    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (exportSession.status == AVAssetExportSessionStatusCompleted) {
+                NSLog(@"Video export successful! Exported to: %@", exportedPath);
+            } else {
+                NSLog(@"Video export failed: %@", exportSession.error);
+            }
+        });
+    }];
 }
 
 - (void)addTextOverlayToVideo:(AVAssetExportSession *)exportSession {
