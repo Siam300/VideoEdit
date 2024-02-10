@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  VideoEdit
 //
-//  Created by Auto on 8/2/24.
+//  Created by Auto on 5/2/24.
 //
 
 #import <UIKit/UIKit.h>
