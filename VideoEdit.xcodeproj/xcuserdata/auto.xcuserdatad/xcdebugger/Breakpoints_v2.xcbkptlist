@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2B394158-B328-4CDC-848D-AEAF08340D02"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "D90B2EFD-5DB2-4E59-B60A-A8B6F2C01CA4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E6C9418-E8FB-4AC6-B9D6-3EDC14191048"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoEdit/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-mergeTextOverlay:exportPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6E6C9418-E8FB-4AC6-B9D6-3EDC14191048 - 99c4da7f3d4ef28c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[ViewController mergeTextOverlay:exportPath:]_block_invoke"
+                  moduleName = "VideoEdit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/auto/Desktop/Study/VideoEdit/VideoEdit/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "6E6C9418-E8FB-4AC6-B9D6-3EDC14191048 - a7e7040ff6a9eae7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController mergeTextOverlay:exportPath:]"
+                  moduleName = "VideoEdit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/auto/Desktop/Study/VideoEdit/VideoEdit/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "2280">
+               </Location>
+               <Location
+                  uuid = "6E6C9418-E8FB-4AC6-B9D6-3EDC14191048 - 99c4da7f3d4ef2ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[ViewController mergeTextOverlay:exportPath:]_block_invoke"
+                  moduleName = "VideoEdit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/auto/Desktop/Study/VideoEdit/VideoEdit/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
